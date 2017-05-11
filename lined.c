@@ -51,7 +51,7 @@ static bool insert_line(int fd, const char* text, size_t len, int line) {
 	printf("%d\t%s\n", line, text);
 
 	if (fd < 0)
-		return false;
+		return true;
 
 	if (write(fd, text, len) != len)	
 		return false;
